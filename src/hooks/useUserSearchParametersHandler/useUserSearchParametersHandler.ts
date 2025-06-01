@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { PriceRange } from '../../types/products';
-import { useAllProducts } from '../useProducts';
+import { useAllProducts } from '../api/useProducts';
 
 const useUserSearchParametersHandler = () => {
   const [tags, setTags] = useState<string[]>([]);

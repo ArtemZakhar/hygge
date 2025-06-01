@@ -1,6 +1,6 @@
 import { createContext, useContext } from 'react';
 
-import { useProductsWithParams } from '../../hooks/useProducts/useProducts';
+import { useProductsWithParams } from '../../hooks/api/useProducts/useProducts';
 import { Product } from '../../types/products';
 
 type ProductContextType = {
