@@ -28,8 +28,10 @@ export const getSearchParamsObject = (
 ): SearchParams => {
   if (!searchParams) return {};
 
-  return searchParams.entries().reduce((acc, [key, value]) => {
-    acc[key] = value;
-    return acc;
-  }, {} as SearchParams);
+  const result = {} as SearchParams;
+  for (const [key, value] of searchParams.entries()) {
+    result[key] = value;
+  }
+
+  return result;
 };
