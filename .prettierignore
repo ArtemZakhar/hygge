@@ -1,0 +1,6 @@
+package-lock.json
+public
+build
+dist
+node_modules
+*.log
