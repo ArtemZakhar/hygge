@@ -6,7 +6,7 @@ import { searchParamsKeys } from '../../../constants/searchParams';
 import { ProductProvider } from '../../../context/ProductContext/ProductContext';
 import useDebounce from '../../../hooks/useDebounce';
 import useHandleSearchParams from '../../../hooks/useHandleSearchParams';
-import SideBar from '../../common/layout/SideBar';
+import SideBar from '../../layout/SideBar';
 import ProductList from './ProductList';
 import { ITEMS_PER_PAGE } from './ProductList/ProductList';
 

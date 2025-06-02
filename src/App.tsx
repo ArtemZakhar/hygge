@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 
 import GridContainer from './components/common/containers/GridContainer';
-import NavBar from './components/common/layout/NavBar';
+import NavBar from './components/layout/NavBar';
 
 function App() {
   return (

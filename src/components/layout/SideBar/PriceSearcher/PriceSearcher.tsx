@@ -2,10 +2,10 @@ import { ChangeEvent, useEffect, useState } from 'react';
 
 import { CircleX } from 'lucide-react';
 
-import { searchParamsKeys } from '../../../../../constants/searchParams';
-import useDebounce from '../../../../../hooks/useDebounce';
-import { PriceRange } from '../../../../../types/products';
-import { SearchParams } from '../../../../../types/searchParams';
+import { searchParamsKeys } from '../../../../constants/searchParams';
+import useDebounce from '../../../../hooks/useDebounce';
+import { PriceRange } from '../../../../types/products';
+import { SearchParams } from '../../../../types/searchParams';
 import BlockWrapper from '../BlockWrapper';
 
 const PriceSearcher = ({
@@ -52,30 +52,30 @@ const PriceSearcher = ({
 
   return (
     <BlockWrapper title="Price Less Than">
-      <div className="flex justify-center mb-4 relative">
-        <label
-          htmlFor="price"
-          className="absolute w-[1px] h-[1px] overflow-hidden"
-        >
-          Input for price search
-        </label>
-
-        <input
-          id="price"
-          name="price"
-          value={priceValue}
-          onChange={handlePriceChange}
-          className="border border-gray-300 rounded-xl px-3 py-1  focus:ring-gray-300 focus:ring-1 focus:outline-none w-24 lg:w-48 pr-6"
-        />
-
-        {!!priceValue.length && (
-          <button
-            className="absolute right-1 top-1/2 -translate-y-1/2"
-            onClick={handleClearInput}
+      <div className="flex justify-center mb-4 relative ">
+        <div className="w-24 lg:w-48 relative">
+          <label
+            htmlFor="price"
+            className="absolute w-[1px] h-[1px] overflow-hidden"
           >
-            <CircleX className="w-4 h-4 text-gray-500" />
-          </button>
-        )}
+            Input for price search
+          </label>
+          <input
+            id="price"
+            name="price"
+            value={priceValue}
+            onChange={handlePriceChange}
+            className="border border-gray-300 rounded-xl px-3 py-1  focus:ring-gray-300 focus:ring-1 focus:outline-none w-full"
+          />
+          {!!priceValue.length && (
+            <button
+              className="absolute right-1 top-1/2 -translate-y-1/2"
+              onClick={handleClearInput}
+            >
+              <CircleX className="w-4 h-4 text-gray-500" />
+            </button>
+          )}
+        </div>
       </div>
 
       <div className="flex justify-between items-center text-sm">

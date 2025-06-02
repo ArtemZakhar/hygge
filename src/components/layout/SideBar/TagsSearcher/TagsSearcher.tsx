@@ -1,5 +1,5 @@
-import { searchParamsKeys } from '../../../../../constants/searchParams';
-import { SearchParams } from '../../../../../types/searchParams';
+import { searchParamsKeys } from '../../../../constants/searchParams';
+import { SearchParams } from '../../../../types/searchParams';
 import BlockWrapper from '../BlockWrapper';
 
 const TagsSearcher = ({
