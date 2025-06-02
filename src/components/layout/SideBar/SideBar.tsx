@@ -24,7 +24,7 @@ const SideBar = () => {
 
   return (
     <aside className="hidden relative sm:col-span-2 lg:col-span-3 rounded-xl px-4 py-4 bg-background-primary h-[80vh] sm:flex ">
-      <div className="relative h-full flex flex-col gap-4">
+      <div className="relative h-full w-full flex flex-col gap-4">
         {context && context}
         <h4 className="text-center">{`Has found ${totalCount} products`}</h4>
 

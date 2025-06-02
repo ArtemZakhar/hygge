@@ -41,7 +41,7 @@ const ProductList = () => {
     <div className="relative rounded-lg min-h-[50vh]">
       {content && content}
 
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-10 ">
+      <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-10 ">
         {productsData?.map((product) => (
           <li key={product.id}>
             <ProductItem product={product} />
@@ -49,12 +49,14 @@ const ProductList = () => {
         ))}
       </ul>
 
-      <Pagination
-        count={totalCount}
-        itemsPerPage={itemsPerPage}
-        currentPage={currentPage}
-        handleChangeItemsPerPage={handleChangeItemsPerPage}
-      />
+      {!isProductsDataLoading && (
+        <Pagination
+          count={totalCount}
+          itemsPerPage={itemsPerPage}
+          currentPage={currentPage}
+          handleChangeItemsPerPage={handleChangeItemsPerPage}
+        />
+      )}
     </div>
   );
 };
