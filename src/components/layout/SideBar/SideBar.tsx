@@ -36,7 +36,7 @@ const SideBar = () => {
           />
         )}
 
-        {price && (
+        {!isLoading && (
           <PriceSearcher
             price={price}
             priceParam={priceParam}
